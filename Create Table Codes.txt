@@ -1,0 +1,71 @@
+-- Tur tablosu
+CREATE TABLE Tur (
+  tur_id INT PRIMARY KEY,
+  tur_adi VARCHAR(150),
+  tur_ucreti DECIMAL(10, 2)
+);
+
+-- Bölge tablosu
+CREATE TABLE Bolge (
+  bolge_id INT PRIMARY KEY,
+  bolge_adi VARCHAR(30),
+  hizmet_ucreti DECIMAL(10, 2)
+);
+
+-- Tur_Bölge tablosu
+CREATE TABLE Tur_Bolge (
+  tur_id INT,
+  bolge_id INT,
+  PRIMARY KEY (tur_id, bolge_id),
+  FOREIGN KEY (tur_id) REFERENCES Tur(tur_id),
+  FOREIGN KEY (bolge_id) REFERENCES Bolge(bolge_id)
+);
+
+-- Rehber tablosu
+CREATE TABLE Rehber (
+  rehber_id INT PRIMARY KEY,
+  ad VARCHAR(20),
+  soyad VARCHAR(40),
+  cinsiyet VARCHAR(10),
+  telefon_numarasi VARCHAR(20),
+  yabanci_dil VARCHAR(50)
+);
+
+-- Turist tablosu
+CREATE TABLE Turist (
+  turist_id INT PRIMARY KEY,
+  ad VARCHAR(20),
+  soyad VARCHAR(40),
+  cinsiyet VARCHAR(10),
+  dogum_tarihi DATE,
+  uyruk VARCHAR(50),
+  geldigi_ulke VARCHAR(50)
+);
+
+-- Tur_Satışı tablosu
+CREATE TABLE Tur_Satisi (
+  satis_id INT PRIMARY KEY,
+  tur_id INT,
+  rehber_id INT,
+  tarih DATE,
+  FOREIGN KEY (tur_id) REFERENCES Tur(tur_id),
+  FOREIGN KEY (rehber_id) REFERENCES Rehber(rehber_id)
+);
+
+-- Tur_Satışı_Turist tablosu
+CREATE TABLE Tur_Satisi_Turist (
+  satis_id INT,
+  turist_id INT,
+  PRIMARY KEY (satis_id, turist_id),
+  FOREIGN KEY (satis_id) REFERENCES Tur_Satisi(satis_id),
+  FOREIGN KEY (turist_id) REFERENCES Turist(turist_id)
+);
+
+-- Fatura tablosu
+CREATE TABLE Fatura (
+  fatura_id INT PRIMARY KEY,
+  satis_id INT,
+  fatura_ucreti DECIMAL(10, 2),
+  fatura_tarihi DATE,
+  FOREIGN KEY (satis_id) REFERENCES Tur_Satisi(satis_id)
+);

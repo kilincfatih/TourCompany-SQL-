@@ -1,0 +1,35 @@
+insert into dbo.Turist(turist_id, ad, soyad, cinsiyet, dogum_tarihi, uyruk, geldigi_ulke)
+VALUES
+('6','Halid', 'İlsu', 'Erkek', '1999-05-15', 'TÜRK', 'TÜRKİYE' ),
+('7','Elif', 'İmamoğlu', 'Kadın', '1975-08-22', 'TÜRK', 'TÜRKİYE' ),
+('8','Nesli', 'Kırkpınar', 'Kadın', '1985-06-06', 'TÜRK', 'TÜRKİYE' ),
+('9','Johnny', 'Deep', 'Erkek', '2002-02-08', 'Amerika', 'ABD' ),
+('10','Melis', 'Örs', 'Kadın', '1965-07-15', 'TÜRK', 'TÜRKİYE' ),
+('11','İhsan', 'Sobacı', 'Erkek', '1969-11-20', 'TÜRK', 'TÜRKİYE' ),
+('12','Hasan', 'Özyay', 'Erkek', '2001-05-02', 'TÜRK', 'TÜRKİYE' );
+
+INSERT INTO dbo.Tur( tur_id, tur_adi, tur_ucreti)
+VALUES 
+('1','SUPER KARADENIZ TUR',1000 ),
+('2','SUPER DOĞU TUR',  1500),
+('3','SUPER GÜNEY DOĞU TUR',  1250),
+('4','SUPER MARMARA TUR', 1350 ),
+('5','MEGA KARADENIZ TUR',2000 ),
+('6','MEGA DOĞU TUR',  2500),
+('7','MEGA GÜNEY DOĞU TUR',  2250),
+('8','MEGA MARMARA TUR', 2350 );
+
+INSERT INTO Rehber( rehber_id, ad, soyad, cinsiyet, telefon_numarasi, yabanci_dil)
+VALUES 
+('1','Ali','Acar','Erkek','05333333333','İngilizce+Almanca' ),
+('2','Cihan','Baykuş','Erkek', '05444444444','İngilizce+Fransızca'),
+('3','Ziya','Döner','Erkek',  '05555555555','İngilizce+Almanca'),
+('4','Nilüfer','Göksoy','Erkek', '05332222222','İngilizce+Arapça'),
+('5','Meltem','İnan','Erkek', '05346666666','İngilizce+Lehçe' );
+
+INSERT INTO dbo.Bolge ( bolge_id, bolge_adi, hizmet_ucreti)
+VALUES 
+('1','KARADENİZ',500 ),
+('2','DOĞU ANADOLU',  1000),
+('3','GÜNEY DOĞU ANADOLU',  750),
+('4','MARMARA', 850 );

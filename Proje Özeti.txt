@@ -1,0 +1,28 @@
+Proje Özeti;
+
+===> Tur Tanımlama: <===
+* Şirket yetkilisi, sistemde kayıtlı bölgelerden en az birini seçerek tur tanımlayabilir.
+* Turun adını belirleyebilir (en fazla 150 karakter).
+* Turun ücretini, içerdiği bölgelerin ücretlerinin toplamı olarak belirleyebilir.
+* Yeni bölgeler ekleyebilir, mevcut bölgeleri düzenleyebilir veya silebilir.
+* Satışı yapılmamış turlarda değişiklik yapabilir veya turu iptal edebilir.
+
+===> Tur Satışı Yapma: <===
+* Şirket yetkilisi, ilgili ekrandan tur satışlarını sisteme girebilir.
+* Satışı yapılan turu ve turiste/turistlere ait bilgileri belirleyebilir.
+* Turun gerçekleşeceği tarihi ve görevlendirilecek rehberi girebilir.
+* Turiste/turistlere ait bilgileri (ad, soyad, cinsiyet, doğum tarihi, uyruk, geldiği ülke) girebilir.
+* Daha önce tur satın alan bir turistse, sistemden bilgileri bulup ekleyebilir.
+
+===> Rehber Tanımlama: <===
+* Şirket yetkilisi, rehberlerin kaydını tutabilir.
+* Rehber ekleyebilir, bilgilerini düzenleyebilir veya rehberi sistemden kaldırabilir.
+* Rehberlere ait bilgileri (ad, soyad, cinsiyet, telefon numarası, yabancı dil bilgisi) girebilir.
+* Rehberlerin hepsi hizmet verilen bölgeler hakkında bilgi sahibidir.
+
+===> Fatura Oluşturma: <===
+* Satış yetkilisi, tur satışını sisteme girdikten sonra fatura oluşturabilir.
+* Bir turist birden fazla tur satın alabilir, bu durumda her tur satışı için ayrı bir fatura kalemi oluşturulmalıdır.
+* Fatura ücreti, satın alınan turların toplam ücretini içerir.
+* 60 yaş üzeri turistler için %15 indirim uygulanır.
+* Satış yetkilisi, sistemde kayıtlı faturaları görüntüleyebilir ve istediği faturayı fatura numarasıyla arayarak bulabilir.
